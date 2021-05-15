@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+:root {
+	--primary: #f3ab1e;
+	--secondary: #3a3a3c;
+}
+/* menu */
+.overlay-menu {
+	background-color: white;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s;
+}
+
+.overlay-menu.active {
+	opacity: 1;
+	visibility: visible;
+	transition: visibility 0s linear 0s, opacity 0.25s 0s;
+}
+/* gallery */
+.gallery {
+	column-count: 2;
+}
+
+.gallery > a {
+    cursor: zoom-in;
+}
+
+.gallery > a:hover img {
+    @apply transform scale-110 transition duration-500;
+}
+@screen sm {
+    .gallery {
+        column-count: 1;
+    }
+}
+@screen md {
+    .gallery {
+        column-count: 2;
+    }
+}
+.transition{
+    transition: all .2s ease-out;
+}
+
+.h-60{
+  height: 14rem;
+}
+
+.w-128{
+  width: 32rem;
+}
+@tailwind utilities;

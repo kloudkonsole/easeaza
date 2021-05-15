@@ -1,0 +1,16 @@
+<!-- gallery -->
+<section class='section container' id='gallery'>
+  <h2 class='text-4xl text-primary mb-16' data-aos='fade-right'>Gallery</h2>
+  <div class='gallery mb-10 gap-4'>
+    {% for url in gallery.url %}
+		{% include gallery-item with url%}
+    {% endfor %}
+
+  </div>
+  <div class='flex justify-center'>
+    <a class='flex items-center hover:opacity-60 transition duration-400' href='/gallery'>
+      <span class='text-secondary'>More</span>
+      <ion-icon class='text-primary text-4xl cursor-pointer ml-2' name='arrow-forward-outline'></ion-icon>
+    </a>
+  </div>
+</section>

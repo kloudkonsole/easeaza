@@ -1,0 +1,22 @@
+{
+  "name": "easeaza",
+  "version": "0.2.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  	"create": "~/repo/test/11ty/node_modules/.bin/pclient-create",
+  	"build:pico": "~/repo/test/11ty/node_modules/.bin/pclient-build --wd bundle --bundle pico --bin ../_site --out bundle --env dev",
+  	"build:shop": "~/repo/test/11ty/node_modules/.bin/pclient-build --wd bundle --bundle shop --bin ../_site --out bundle --env dev",
+  	"build:11ty": "DEBUG=Eleventy:* eleventy",
+  	"build:tw": "../node_modules/.bin/tailwindcss build ./src/assets/styles.css -o ./_site/assets/styles.css",
+  	"build": "npm run build:11ty && npm run build:tw && npm run build:pico",
+  	"build:prod": "NODE_ENV=production npm run build",
+  	"start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"lint": "eslint bundle",
+	"lint:fix": "eslint bundle --fix"
+  },
+  "keywords": [],
+  "author": "Darren Liew",
+  "license": "ISC"
+}

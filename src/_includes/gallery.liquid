@@ -1,0 +1,18 @@
+---
+layout: base.liquid
+---
+<section class='container pt-32 pb-20'>
+  <div class='flex mb-10'>
+    <a class='flex items-center hover:opacity-60 transition duration-400' href='/'>
+      <ion-icon class='text-primary text-4xl cursor-pointer mr-2' name='arrow-back-outline'></ion-icon>
+      <span class='text-secondary'>Home</span>
+    </a>
+  </div>
+  <div class='gallery gap-4'>
+    {% for url in gallery.url %}
+		{% include prpt-card, with url %}
+    {% endfor %}
+  </div>
+</section>
+
+

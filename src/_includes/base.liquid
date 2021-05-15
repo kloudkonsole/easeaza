@@ -1,0 +1,26 @@
+---
+logoSrc: '/assets/img/logo.png'
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include basic/head %}
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css' rel='stylesheet'>
+    <link href='/assets/styles.css' rel='stylesheet'>
+  </head>
+  <body>
+    {% include basic/header %}
+
+    <main class='w-full overflow-hidden'>
+      {{ content | safe }}
+    </main>
+
+    {% include basic/footer %}
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+	<script async defer src="https://js.stripe.com/v3/"></script>
+	{% for item in bundles %}
+    <script async defer src="{{item}}.js"></script>
+	{% endfor %}
+  </body>
+</html>

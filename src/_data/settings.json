@@ -1,0 +1,45 @@
+{
+  "menu": [
+    {
+      "name": "Home",
+      "url": "#"
+    },
+    {
+      "name": "Collections",
+      "url": "#collections"
+    },
+    {
+      "name": "About",
+      "url": "#about"
+    },
+    {
+      "name": "Gallery",
+      "url": "#gallery"
+    }
+  ],
+  "socials": [
+    {
+      "name": "facebook",
+      "url": "",
+      "icon": "logo-facebook"
+    },
+    {
+      "name": "instagram",
+      "url": "",
+      "icon": "logo-instagram"
+    },
+    {
+      "name": "youtube",
+      "url": "",
+      "icon": "logo-youtube"
+    }
+  ],
+  "meta": {
+    "title": "Easeaza",
+    "description": "Rent a place with ease",
+    "siteUrl": "http://localhost:8080/",
+    "siteName": "Easeaza Collection",
+    "imgSrc": "https://res.cloudinary.com/dduublnsr/image/upload/v1606802454/rooster/120130618_276756523630343_8600772113413042475_o_rskmzq.jpg",
+    "imgAtl": "Easeaza"
+  }
+}

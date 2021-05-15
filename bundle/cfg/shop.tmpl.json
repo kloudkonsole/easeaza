@@ -1,0 +1,14 @@
+[
+	["cred", "map", {
+		"email": "user@email.com",
+		"password": "password",
+		"mode": "json"
+	}],
+	["backend", "map", {
+		"domain": "http://domain:port"
+	}],
+	["payment", "map", {
+		"type": "stripe",
+		"pub": "pk_test_xxxxxx"
+	}]
+]

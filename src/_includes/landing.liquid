@@ -1,0 +1,20 @@
+---
+layout: base.liquid
+---
+
+{% include basic/vhero%}
+
+{% include category%}
+
+<!-- event -->
+{% if event.open == true %}
+{% include event%}
+{% endif %}
+
+{% include intro%}
+
+{% include tab-gallery%}
+
+{% include about%}
+
+{% include expandable-gallery%}

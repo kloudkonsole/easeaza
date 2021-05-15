@@ -1,0 +1,38 @@
+[
+	["models", "type", "po/Collection", [
+		"data", 1, "options"
+	]],
+	["gallery", "view", [
+		["options", "map", {"el": "div.gallery"}],
+		[ "cred", "ref", "cred"],
+		[ "backend", "ref", "backend"],
+		[ "payment", "ref", "payment"],
+		[ "auth", "models", [
+			[ "cred", "ref", "cred"],
+			[ "backend", "ref", "backend"]
+		], "auth"],
+		[ "files", "models", [
+			["auth", "ref", "auth"]
+		], "files"],
+		[ "sku", "models", [
+			["auth", "ref", "auth"],
+			["files", "ref", "files"]
+		], "sku"],
+		[ "checkout", "models", [
+			["auth", "ref", "auth"],
+			["payment", "ref", "payment"]
+		], "stripe"],
+		[ "supermodel", "models", [
+			["auth", "ref", "auth"],
+			["sku", "ref", "sku"],
+			["files", "ref", "files"],
+			[ "backend", "ref", "backend"]
+		], "supermodel"],
+
+		["galleryItem", "view", [
+			["options", "map", {"id": "app", "class": "bg-white w-128 h-60 rounded shadow-md flex card text-grey-darkest"}],
+			["tpl", "file", "galleryItem.asp"],
+			["checkout", "ref", "checkout"]
+		]]
+	]]
+]
